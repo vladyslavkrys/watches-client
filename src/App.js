@@ -1,7 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import _ from "lodash";
+import "./App.css";
 
-function App() {
+const App = () => {
+  console.log(_.join(["Hello", "webpack"], " "));
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +13,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -20,6 +25,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
