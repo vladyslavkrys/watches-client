@@ -1,38 +1,42 @@
 import { createTheme } from '@mui/material';
+import { GRAYSCALE_COLORS, OTHER_COLORS, SCREENS } from './constants';
 
 export const theme = createTheme({
   palette: {
     background: {
-      dark: '#1D1D1D',
-      light: '#FFFFFF',
-      grey: '#2D2D2D'
+      dark: GRAYSCALE_COLORS.BLACK,
+      white: GRAYSCALE_COLORS.WHITE,
+      grey: GRAYSCALE_COLORS.DARK
     },
     buttons: {
-      primary: '#FF866C',
-      dark: '#1D1D1D'
+      primary: OTHER_COLORS.RED,
+      dark: GRAYSCALE_COLORS.BLACK
     },
     primary: {
-      main: '#F7F0E3',
-      white: '#FFFFFF',
-      light: '#B5B1AA',
-      dark: '#7D7D7D',
-      black: '#1D1D1D'
+      main: GRAYSCALE_COLORS.MAIN,
+      white: GRAYSCALE_COLORS.WHITE,
+      light: GRAYSCALE_COLORS.LIGHT,
+      dark: GRAYSCALE_COLORS.GREY,
+      black: GRAYSCALE_COLORS.BLACK
     },
     secondary: {
-      main: '#E2E2E2',
-      dark: '#A8A8A8'
+      main: GRAYSCALE_COLORS.SECONDARY_LIGHT,
+      dark: GRAYSCALE_COLORS.SECONDARY_GREY
     },
     spot: {
-      main: '#FF866C'
+      main: OTHER_COLORS.RED
     }
+  },
+  typography: {
+    fontFamily: 'Reckless'
   },
   breakpoints: {
     values: {
-      xs: 420,
-      sm: 768,
-      md: 1024,
-      lg: 1680,
-      xl: 1920
+      xs: SCREENS.EXTRA_SMALL,
+      sm: SCREENS.SMALL,
+      md: SCREENS.MEDIUM,
+      lg: SCREENS.LARGE,
+      xl: SCREENS.EXTRA_LARGE
     }
   }
 });

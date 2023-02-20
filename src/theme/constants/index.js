@@ -1,0 +1,22 @@
+export const GRAYSCALE_COLORS = {
+  WHITE: '#FFFFFF',
+  MAIN: '#F7F0E3',
+  LIGHT: '#B5B1AA',
+  GREY: '#7D7D7D',
+  DARK: '#2D2D2D',
+  BLACK: '#1D1D1D',
+  SECONDARY_LIGHT: '#E2E2E2',
+  SECONDARY_GREY: '#A8A8A8'
+};
+
+export const OTHER_COLORS = {
+  RED: '#FF866C'
+};
+
+export const SCREENS = {
+  EXTRA_SMALL: 420,
+  SMALL: 768,
+  MEDIUM: 1024,
+  LARGE: 1680,
+  EXTRA_LARGE: 1920
+};
