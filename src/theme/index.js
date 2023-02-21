@@ -28,7 +28,7 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: 'Reckless'
+    fontFamily: ['Reckless', 'Neue Haas Unica'].join(',')
   },
   breakpoints: {
     values: {
