@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 import { GRAYSCALE_COLORS, OTHER_COLORS, SCREENS } from './constants';
 
-export const theme = createTheme({
+export const basicTheme = createTheme({
   palette: {
     background: {
       dark: GRAYSCALE_COLORS.BLACK,
@@ -28,7 +28,8 @@ export const theme = createTheme({
     }
   },
   typography: {
-    fontFamily: ['Reckless', 'Neue Haas Unica'].join(',')
+    fontWeightNormal: 400,
+    fontFamily: ['Reckless', 'Neue Haas Unica'].join(',') // TODO ASK
   },
   breakpoints: {
     values: {
@@ -37,6 +38,61 @@ export const theme = createTheme({
       md: SCREENS.MEDIUM,
       lg: SCREENS.LARGE,
       xl: SCREENS.EXTRA_LARGE
+    }
+  },
+  spacing: (factor) => `${factor / 16}rem`
+});
+
+export const theme = createTheme(basicTheme, {
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true
+      }
+    }
+  },
+  typography: {
+    color: basicTheme.palette.primary.white,
+    h1: {
+      fontSize: basicTheme.typography.pxToRem(64), // TODO ASK
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    h2: {
+      fontSize: basicTheme.typography.pxToRem(48),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    h3: {
+      fontSize: basicTheme.typography.pxToRem(26),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    h4: {
+      fontSize: basicTheme.typography.pxToRem(24),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    h5: {
+      fontSize: basicTheme.typography.pxToRem(18),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    h6: {
+      fontSize: basicTheme.typography.pxToRem(16),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    body1: {
+      fontSize: basicTheme.typography.pxToRem(14),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    body2: {
+      fontSize: basicTheme.typography.pxToRem(12),
+      fontWeight: basicTheme.typography.fontWeightNormal
+    },
+    subtitle1: {
+      fontSize: basicTheme.typography.pxToRem(16),
+      fontWeight: basicTheme.typography.fontWeightNormal,
+      color: basicTheme.palette.primary.white
+    },
+    subtitle2: {
+      fontSize: basicTheme.typography.pxToRem(14),
+      fontWeight: basicTheme.typography.fontWeightNormal
     }
   }
 });
